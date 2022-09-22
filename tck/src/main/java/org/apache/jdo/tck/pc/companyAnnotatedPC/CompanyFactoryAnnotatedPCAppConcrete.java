@@ -26,67 +26,67 @@ import org.apache.jdo.tck.pc.company.*;
  * This class uses the PersistenceManager.newInstance method with the concrete
  * class as a parameter.
  */
-public class CompanyFactoryAnnotatedPCAppConcrete
-        implements CompanyFactoryNewInstance {
-    
-    PersistenceManager pm = null;
+public class CompanyFactoryAnnotatedPCAppConcrete implements CompanyFactoryNewInstance {
 
-    /**
-     * Creates a new instance of CompanyFactoryAnnotatedPCAppConcrete
-     * @param pm the PersistenceManager
-     */
-    public CompanyFactoryAnnotatedPCAppConcrete(PersistenceManager pm) {
-        this.pm = pm;        
-    }
+  PersistenceManager pm = null;
 
-    @SuppressWarnings("rawtypes")
-    @Override
-    public Class<?>[] getTearDownClasses() {
-        return new Class[] {
-            PCAppDentalInsurance.class,
-            PCAppMedicalInsurance.class,
-            PCAppPartTimeEmployee.class,
-            PCAppFullTimeEmployee.class,
-            PCAppProject.class,
-            PCAppDepartment.class,
-            PCAppCompany.class,
-            PCAppAddress.class
-        };
-    }
-    
-    public IAddress newAddress() {
-        return new PCAppAddress();
-    }
+  /**
+   * Creates a new instance of CompanyFactoryAnnotatedPCAppConcrete
+   *
+   * @param pm the PersistenceManager
+   */
+  public CompanyFactoryAnnotatedPCAppConcrete(PersistenceManager pm) {
+    this.pm = pm;
+  }
 
-    public IMeetingRoom newMeetingRoom() {
-        return null;
-    }
-    
-    public ICompany newCompany() {
-        return new PCAppCompany();
-    }
-    
-    public IDentalInsurance newDentalInsurance() {
-        return new PCAppDentalInsurance();
-    }
-    
-    public IDepartment newDepartment() {
-        return new PCAppDepartment();
-    }
-    
-    public IFullTimeEmployee newFullTimeEmployee() {
-        return new PCAppFullTimeEmployee();
-    }
-    
-    public IMedicalInsurance newMedicalInsurance() {
-        return new PCAppMedicalInsurance();
-    }
-    
-    public IPartTimeEmployee newPartTimeEmployee() {
-        return new PCAppPartTimeEmployee();
-    }
-    
-    public IProject newProject() {
-        return new PCAppProject();
-    }
+  @SuppressWarnings("rawtypes")
+  @Override
+  public Class<?>[] getTearDownClasses() {
+    return new Class[] {
+      PCAppDentalInsurance.class,
+      PCAppMedicalInsurance.class,
+      PCAppPartTimeEmployee.class,
+      PCAppFullTimeEmployee.class,
+      PCAppProject.class,
+      PCAppDepartment.class,
+      PCAppCompany.class,
+      PCAppAddress.class
+    };
+  }
+
+  public IAddress newAddress() {
+    return new PCAppAddress();
+  }
+
+  public IMeetingRoom newMeetingRoom() {
+    return null;
+  }
+
+  public ICompany newCompany() {
+    return new PCAppCompany();
+  }
+
+  public IDentalInsurance newDentalInsurance() {
+    return new PCAppDentalInsurance();
+  }
+
+  public IDepartment newDepartment() {
+    return new PCAppDepartment();
+  }
+
+  public IFullTimeEmployee newFullTimeEmployee() {
+    return new PCAppFullTimeEmployee();
+  }
+
+  public IMedicalInsurance newMedicalInsurance() {
+    return new PCAppMedicalInsurance();
+  }
+
+  public IPartTimeEmployee newPartTimeEmployee() {
+    return new PCAppPartTimeEmployee();
+  }
+
+  public IProject newProject() {
+    return new PCAppProject();
+  }
 }

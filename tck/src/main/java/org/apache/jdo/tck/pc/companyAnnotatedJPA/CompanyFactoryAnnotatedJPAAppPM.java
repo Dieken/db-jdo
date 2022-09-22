@@ -26,66 +26,66 @@ import org.apache.jdo.tck.pc.company.*;
  * This class uses the PersistenceManager.newInstance method with the concrete
  * class as a parameter.
  */
-public class CompanyFactoryAnnotatedJPAAppPM
-        extends CompanyFactoryAbstractImpl
-        implements CompanyFactoryNewInstance {
+public class CompanyFactoryAnnotatedJPAAppPM extends CompanyFactoryAbstractImpl
+    implements CompanyFactoryNewInstance {
 
-    /**
-     * Creates a new instance of CompanyFactoryAnnotatedJPAAppPM
-     * @param pm the PersistenceManager
-     */
-    public CompanyFactoryAnnotatedJPAAppPM(PersistenceManager pm) {
-        super(pm);
-    }
+  /**
+   * Creates a new instance of CompanyFactoryAnnotatedJPAAppPM
+   *
+   * @param pm the PersistenceManager
+   */
+  public CompanyFactoryAnnotatedJPAAppPM(PersistenceManager pm) {
+    super(pm);
+  }
 
-    @SuppressWarnings("rawtypes")
-    @Override
-    public Class<?>[] getTearDownClasses() {
-        return new Class[] {
-            JPAAppDentalInsurance.class,
-            JPAAppMedicalInsurance.class,
-            JPAAppPartTimeEmployee.class,
-            JPAAppFullTimeEmployee.class,
-            JPAAppProject.class,
-            JPAAppDepartment.class,
-            JPAAppCompany.class,
-            JPAAppAddress.class
-        };
-    }
-    
-    public IAddress newAddress() {
-        return pm.newInstance(JPAAppAddress.class);
-    }
+  @SuppressWarnings("rawtypes")
+  @Override
+  public Class<?>[] getTearDownClasses() {
+    return new Class[] {
+      JPAAppDentalInsurance.class,
+      JPAAppMedicalInsurance.class,
+      JPAAppPartTimeEmployee.class,
+      JPAAppFullTimeEmployee.class,
+      JPAAppProject.class,
+      JPAAppDepartment.class,
+      JPAAppCompany.class,
+      JPAAppAddress.class
+    };
+  }
 
-    public IMeetingRoom newMeetingRoom() {
-        return null;
-    }
-    
-    public ICompany newCompany() {
-        return pm.newInstance(JPAAppCompany.class);
-    }
-    
-    public IDentalInsurance newDentalInsurance() {
-        return pm.newInstance(JPAAppDentalInsurance.class);
-    }
-    
-    public IDepartment newDepartment() {
-        return pm.newInstance(JPAAppDepartment.class);
-    }
-    
-    public IFullTimeEmployee newFullTimeEmployee() {
-        return pm.newInstance(JPAAppFullTimeEmployee.class);
-    }
-    
-    public IMedicalInsurance newMedicalInsurance() {
-        return pm.newInstance(JPAAppMedicalInsurance.class);
-    }
-    
-    public IPartTimeEmployee newPartTimeEmployee() {
-        return pm.newInstance(JPAAppPartTimeEmployee.class);
-    }
-    
-    public IProject newProject() {
-        return pm.newInstance(JPAAppProject.class);
-    }
+  public IAddress newAddress() {
+    return pm.newInstance(JPAAppAddress.class);
+  }
+
+  public IMeetingRoom newMeetingRoom() {
+    return null;
+  }
+
+  public ICompany newCompany() {
+    return pm.newInstance(JPAAppCompany.class);
+  }
+
+  public IDentalInsurance newDentalInsurance() {
+    return pm.newInstance(JPAAppDentalInsurance.class);
+  }
+
+  public IDepartment newDepartment() {
+    return pm.newInstance(JPAAppDepartment.class);
+  }
+
+  public IFullTimeEmployee newFullTimeEmployee() {
+    return pm.newInstance(JPAAppFullTimeEmployee.class);
+  }
+
+  public IMedicalInsurance newMedicalInsurance() {
+    return pm.newInstance(JPAAppMedicalInsurance.class);
+  }
+
+  public IPartTimeEmployee newPartTimeEmployee() {
+    return pm.newInstance(JPAAppPartTimeEmployee.class);
+  }
+
+  public IProject newProject() {
+    return pm.newInstance(JPAAppProject.class);
+  }
 }

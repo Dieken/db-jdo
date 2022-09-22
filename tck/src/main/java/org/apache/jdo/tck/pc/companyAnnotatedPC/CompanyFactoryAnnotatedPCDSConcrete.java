@@ -26,67 +26,67 @@ import org.apache.jdo.tck.pc.company.*;
  * This class uses the PersistenceManager.newInstance method with the concrete
  * class as a parameter.
  */
-public class CompanyFactoryAnnotatedPCDSConcrete
-        implements CompanyFactoryNewInstance {
-    
-    PersistenceManager pm = null;
+public class CompanyFactoryAnnotatedPCDSConcrete implements CompanyFactoryNewInstance {
 
-    /**
-     * Creates a new instance of CompanyFactoryAnnotatedPCDSConcrete
-     * @param pm the PersistenceManager
-     */
-    public CompanyFactoryAnnotatedPCDSConcrete(PersistenceManager pm) {
-        this.pm = pm;        
-    }
+  PersistenceManager pm = null;
 
-    @SuppressWarnings("rawtypes")
-    @Override
-    public Class<?>[] getTearDownClasses() {
-        return new Class[] {
-            PCDSDentalInsurance.class,
-            PCDSMedicalInsurance.class,
-            PCDSPartTimeEmployee.class,
-            PCDSFullTimeEmployee.class,
-            PCDSProject.class,
-            PCDSDepartment.class,
-            PCDSCompany.class,
-            PCDSAddress.class
-        };
-    }
-    
-    public IAddress newAddress() {
-        return new PCDSAddress();
-    }
+  /**
+   * Creates a new instance of CompanyFactoryAnnotatedPCDSConcrete
+   *
+   * @param pm the PersistenceManager
+   */
+  public CompanyFactoryAnnotatedPCDSConcrete(PersistenceManager pm) {
+    this.pm = pm;
+  }
 
-    public IMeetingRoom newMeetingRoom() {
-        return null;
-    }
-    
-    public ICompany newCompany() {
-        return new PCDSCompany();
-    }
-    
-    public IDentalInsurance newDentalInsurance() {
-        return new PCDSDentalInsurance();
-    }
-    
-    public IDepartment newDepartment() {
-        return new PCDSDepartment();
-    }
-    
-    public IFullTimeEmployee newFullTimeEmployee() {
-        return new PCDSFullTimeEmployee();
-    }
-    
-    public IMedicalInsurance newMedicalInsurance() {
-        return new PCDSMedicalInsurance();
-    }
-    
-    public IPartTimeEmployee newPartTimeEmployee() {
-        return new PCDSPartTimeEmployee();
-    }
-    
-    public IProject newProject() {
-        return new PCDSProject();
-    }
+  @SuppressWarnings("rawtypes")
+  @Override
+  public Class<?>[] getTearDownClasses() {
+    return new Class[] {
+      PCDSDentalInsurance.class,
+      PCDSMedicalInsurance.class,
+      PCDSPartTimeEmployee.class,
+      PCDSFullTimeEmployee.class,
+      PCDSProject.class,
+      PCDSDepartment.class,
+      PCDSCompany.class,
+      PCDSAddress.class
+    };
+  }
+
+  public IAddress newAddress() {
+    return new PCDSAddress();
+  }
+
+  public IMeetingRoom newMeetingRoom() {
+    return null;
+  }
+
+  public ICompany newCompany() {
+    return new PCDSCompany();
+  }
+
+  public IDentalInsurance newDentalInsurance() {
+    return new PCDSDentalInsurance();
+  }
+
+  public IDepartment newDepartment() {
+    return new PCDSDepartment();
+  }
+
+  public IFullTimeEmployee newFullTimeEmployee() {
+    return new PCDSFullTimeEmployee();
+  }
+
+  public IMedicalInsurance newMedicalInsurance() {
+    return new PCDSMedicalInsurance();
+  }
+
+  public IPartTimeEmployee newPartTimeEmployee() {
+    return new PCDSPartTimeEmployee();
+  }
+
+  public IProject newProject() {
+    return new PCDSProject();
+  }
 }

@@ -26,68 +26,68 @@ import org.apache.jdo.tck.pc.company.*;
  * This class uses the PersistenceManager.newInstance method with the concrete
  * class as a parameter.
  */
-public class CompanyFactoryAnnotatedFCAppConcrete
-        implements CompanyFactoryNewInstance {
-    
-    PersistenceManager pm = null;
+public class CompanyFactoryAnnotatedFCAppConcrete implements CompanyFactoryNewInstance {
 
-    /**
-     * Creates a new instance of CompanyFactoryAnnotatedFCAppConcrete
-     * @param pm the PersistenceManager
-     */
-    public CompanyFactoryAnnotatedFCAppConcrete(PersistenceManager pm) {
-        this.pm = pm;        
-    }
+  PersistenceManager pm = null;
 
-    @SuppressWarnings("rawtypes")
-    @Override
-    public Class<?>[] getTearDownClasses() {
-        return new Class[] {
-            FCAppDentalInsurance.class,
-            FCAppMedicalInsurance.class,
-            FCAppPartTimeEmployee.class,
-            FCAppFullTimeEmployee.class,
-            FCAppProject.class,
-            FCAppDepartment.class,
-            FCAppMeetingRoom.class,
-            FCAppCompany.class,
-            FCAppAddress.class
-        };
-    }
-    
-    public IAddress newAddress() {
-        return new FCAppAddress();
-    }
+  /**
+   * Creates a new instance of CompanyFactoryAnnotatedFCAppConcrete
+   *
+   * @param pm the PersistenceManager
+   */
+  public CompanyFactoryAnnotatedFCAppConcrete(PersistenceManager pm) {
+    this.pm = pm;
+  }
 
-    public IMeetingRoom newMeetingRoom() {
-        return new FCAppMeetingRoom();
-    }
-    
-    public ICompany newCompany() {
-        return new FCAppCompany();
-    }
-    
-    public IDentalInsurance newDentalInsurance() {
-        return new FCAppDentalInsurance();
-    }
-    
-    public IDepartment newDepartment() {
-        return new FCAppDepartment();
-    }
-    
-    public IFullTimeEmployee newFullTimeEmployee() {
-        return new FCAppFullTimeEmployee();
-    }
-    
-    public IMedicalInsurance newMedicalInsurance() {
-        return new FCAppMedicalInsurance();
-    }
-    
-    public IPartTimeEmployee newPartTimeEmployee() {
-        return new FCAppPartTimeEmployee();
-    }
-    
-    public IProject newProject() {
-        return new FCAppProject();
-    }
+  @SuppressWarnings("rawtypes")
+  @Override
+  public Class<?>[] getTearDownClasses() {
+    return new Class[] {
+      FCAppDentalInsurance.class,
+      FCAppMedicalInsurance.class,
+      FCAppPartTimeEmployee.class,
+      FCAppFullTimeEmployee.class,
+      FCAppProject.class,
+      FCAppDepartment.class,
+      FCAppMeetingRoom.class,
+      FCAppCompany.class,
+      FCAppAddress.class
+    };
+  }
+
+  public IAddress newAddress() {
+    return new FCAppAddress();
+  }
+
+  public IMeetingRoom newMeetingRoom() {
+    return new FCAppMeetingRoom();
+  }
+
+  public ICompany newCompany() {
+    return new FCAppCompany();
+  }
+
+  public IDentalInsurance newDentalInsurance() {
+    return new FCAppDentalInsurance();
+  }
+
+  public IDepartment newDepartment() {
+    return new FCAppDepartment();
+  }
+
+  public IFullTimeEmployee newFullTimeEmployee() {
+    return new FCAppFullTimeEmployee();
+  }
+
+  public IMedicalInsurance newMedicalInsurance() {
+    return new FCAppMedicalInsurance();
+  }
+
+  public IPartTimeEmployee newPartTimeEmployee() {
+    return new FCAppPartTimeEmployee();
+  }
+
+  public IProject newProject() {
+    return new FCAppProject();
+  }
 }
