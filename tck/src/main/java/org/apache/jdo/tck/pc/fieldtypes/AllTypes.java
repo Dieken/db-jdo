@@ -25,7 +25,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
-import javax.jdo.*;
+import javax.jdo.PersistenceManager;
+import javax.jdo.Transaction;
 
 public class AllTypes {
   private int id;

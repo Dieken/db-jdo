@@ -18,7 +18,10 @@ package javax.jdo;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.security.*;
+import java.security.Permission;
+import java.security.PrivilegedAction;
+import java.security.PrivilegedActionException;
+import java.security.PrivilegedExceptionAction;
 import javax.jdo.spi.JDOPermission;
 
 /**

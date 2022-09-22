@@ -18,7 +18,8 @@
 package org.apache.jdo.tck.pc.companyAnnotatedJPA;
 
 import java.util.Date;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import org.apache.jdo.tck.pc.company.IPartTimeEmployee;
 import org.apache.jdo.tck.util.EqualityHelper;
 

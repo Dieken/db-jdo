@@ -19,7 +19,12 @@ package org.apache.jdo.tck.pc.companyAnnotatedPI;
 
 import java.util.Date;
 import java.util.Set;
-import javax.jdo.annotations.*;
+import javax.jdo.annotations.Column;
+import javax.jdo.annotations.Element;
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import org.apache.jdo.tck.pc.company.IDentalInsurance;
 import org.apache.jdo.tck.pc.company.IDepartment;
 import org.apache.jdo.tck.pc.company.IEmployee;

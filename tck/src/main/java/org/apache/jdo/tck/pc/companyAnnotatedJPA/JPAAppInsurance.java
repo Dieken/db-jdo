@@ -19,7 +19,14 @@ package org.apache.jdo.tck.pc.companyAnnotatedJPA;
 
 import java.io.Serializable;
 import java.util.Comparator;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import org.apache.jdo.tck.pc.company.IEmployee;
 import org.apache.jdo.tck.pc.company.IInsurance;
 import org.apache.jdo.tck.util.DeepEquality;

@@ -18,7 +18,8 @@
 package org.apache.jdo.tck.pc.companyAnnotatedJPA;
 
 import java.math.BigDecimal;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import org.apache.jdo.tck.pc.company.IDentalInsurance;
 import org.apache.jdo.tck.pc.company.IEmployee;
 import org.apache.jdo.tck.util.EqualityHelper;

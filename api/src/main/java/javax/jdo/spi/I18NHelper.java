@@ -20,7 +20,9 @@ package javax.jdo.spi;
 import java.lang.reflect.InvocationTargetException;
 import java.security.PrivilegedAction;
 import java.text.MessageFormat;
-import java.util.*;
+import java.util.Hashtable;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.jdo.JDOFatalInternalException;
 import javax.jdo.LegacyJava;
 

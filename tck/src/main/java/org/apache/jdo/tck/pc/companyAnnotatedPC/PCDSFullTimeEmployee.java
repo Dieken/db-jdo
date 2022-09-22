@@ -18,7 +18,13 @@
 package org.apache.jdo.tck.pc.companyAnnotatedPC;
 
 import java.util.Date;
-import javax.jdo.annotations.*;
+import javax.jdo.annotations.Column;
+import javax.jdo.annotations.DatastoreIdentity;
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.NotPersistent;
+import javax.jdo.annotations.PersistenceCapable;
 import org.apache.jdo.tck.pc.company.IAddress;
 import org.apache.jdo.tck.pc.company.IFullTimeEmployee;
 import org.apache.jdo.tck.util.EqualityHelper;

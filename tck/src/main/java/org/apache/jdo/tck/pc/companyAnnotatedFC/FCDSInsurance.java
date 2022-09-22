@@ -19,7 +19,9 @@ package org.apache.jdo.tck.pc.companyAnnotatedFC;
 
 import java.io.Serializable;
 import java.util.Comparator;
-import javax.jdo.annotations.*;
+import javax.jdo.annotations.Column;
+import javax.jdo.annotations.Index;
+import javax.jdo.annotations.PersistenceCapable;
 import org.apache.jdo.tck.pc.company.IEmployee;
 import org.apache.jdo.tck.pc.company.IInsurance;
 import org.apache.jdo.tck.util.DeepEquality;

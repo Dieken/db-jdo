@@ -30,7 +30,7 @@ import javax.jdo.datastore.DataStoreCache;
 import javax.jdo.listener.InstanceLifecycleListener;
 import javax.jdo.metadata.JDOMetadata;
 import javax.jdo.metadata.TypeMetadata;
-import javax.jdo.spi.JDOPermission; // for getFetchGroups javadoc
+import javax.jdo.spi.JDOPermission;
 
 /**
  * The <code>PersistenceManagerFactory</code> is the interface to use to obtain <code>

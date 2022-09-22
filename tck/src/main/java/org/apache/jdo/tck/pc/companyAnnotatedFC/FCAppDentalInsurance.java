@@ -18,7 +18,9 @@
 package org.apache.jdo.tck.pc.companyAnnotatedFC;
 
 import java.math.BigDecimal;
-import javax.jdo.annotations.*;
+import javax.jdo.annotations.Column;
+import javax.jdo.annotations.IdentityType;
+import javax.jdo.annotations.PersistenceCapable;
 import org.apache.jdo.tck.pc.company.IDentalInsurance;
 import org.apache.jdo.tck.pc.company.IEmployee;
 import org.apache.jdo.tck.util.EqualityHelper;
