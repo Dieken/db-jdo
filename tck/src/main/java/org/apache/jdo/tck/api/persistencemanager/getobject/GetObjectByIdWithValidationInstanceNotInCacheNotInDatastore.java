@@ -53,7 +53,7 @@ public class GetObjectByIdWithValidationInstanceNotInCacheNotInDatastore
     Transaction tx = pm.currentTransaction();
     tx.setRestoreValues(
         false); // This should cause eviction of transactional instances when transaction is later
-                // rolled back.
+    // rolled back.
     tx.begin();
     PCPoint p1 = new PCPoint(1, 3);
     pm.makePersistent(p1);

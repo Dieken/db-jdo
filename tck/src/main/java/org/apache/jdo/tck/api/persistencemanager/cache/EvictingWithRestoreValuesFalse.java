@@ -71,7 +71,7 @@ public class EvictingWithRestoreValuesFalse extends PersistenceManagerTest {
     Transaction tx = pm.currentTransaction();
     tx.setRestoreValues(
         false); // This should cause eviction of transactional instances when transaction is later
-                // rolled back.
+    // rolled back.
 
     // Test
     tx.begin();

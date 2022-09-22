@@ -78,7 +78,7 @@ public class MakePersistentAndInstancesNotReachable extends PersistenceManagerTe
     comp.addDepartment(dep3);
     pm.makePersistent(
         comp); // Now the transient departments should be made provisionally persistent via
-               // reachability
+    // reachability
     int curr = currentState(dep1);
     if (curr != PERSISTENT_NEW) {
       fail(ASSERTION_FAILED, "dep1 should be persistent-new, state is " + states[curr]);

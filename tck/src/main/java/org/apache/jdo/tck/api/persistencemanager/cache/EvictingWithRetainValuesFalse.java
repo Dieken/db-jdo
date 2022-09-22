@@ -76,7 +76,7 @@ public class EvictingWithRetainValuesFalse extends PersistenceManagerTest {
       Transaction tx = pm.currentTransaction();
       tx.setRetainValues(
           false); // This should cause eviction of transactional instances when transaction is later
-                  // commited.
+      // commited.
 
       // Test
       tx.begin();

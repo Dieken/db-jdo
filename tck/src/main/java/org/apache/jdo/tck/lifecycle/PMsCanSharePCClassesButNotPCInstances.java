@@ -184,8 +184,8 @@ public class PMsCanSharePCClassesButNotPCInstances extends JDO_Test {
           tx.commit();
         } catch (JDOException ex) {
           if (!sharedPC) // we expect an exception for all but one of the inserters in the case of a
-                         // shared PC
-          throw ex;
+            // shared PC
+            throw ex;
         } finally {
           incrAttempts();
           if (tx != null && tx.isActive()) tx.rollback();

@@ -79,7 +79,6 @@ public class RangeAsString extends QueryTest {
     executeJDOQLTypedQuery(ASSERTION_FAILED, holder, expected);
   }
   /** */
-
   public void testPositive1() {
     List<Person> expected =
         getTransientCompanyModelInstancesAsList(Person.class, "emp1", "emp2", "emp3", "emp4");
@@ -111,7 +110,6 @@ public class RangeAsString extends QueryTest {
     executeJDOQLTypedQuery(ASSERTION_FAILED, holder, expected);
   }
   /** */
-
   public void testPositive2() {
     List<Person> expected =
         getTransientCompanyModelInstancesAsList(Person.class, "emp2", "emp3", "emp4", "emp5");
@@ -143,7 +141,6 @@ public class RangeAsString extends QueryTest {
     executeJDOQLTypedQuery(ASSERTION_FAILED, holder, expected);
   }
   /** */
-
   public void testPositive3() {
     List<Person> expected =
         getTransientCompanyModelInstancesAsList(Person.class, "emp2", "emp3", "emp4");

@@ -131,7 +131,7 @@ public class PersistentFieldsArePersistentInSubClasses extends TestParts {
       AllPersist4 b = null;
 
       try { // retrieve object created in previous transaction & store in value array for later
-            // comparison
+        // comparison
         TestParts.thirdObj_V[1] = pm.getObjectById(objPtrB, true);
       } catch (JDOUserException e) {
         // could not locate persistent object created in previous transaction
@@ -152,9 +152,8 @@ public class PersistentFieldsArePersistentInSubClasses extends TestParts {
 
         // verify referenced persistent object contains correct values
         b = a.thirdObj;
-        if (b
-            != null) { // if previous error caused b to be null, then these tests cannot be
-                       // performed.
+        if (b != null) { // if previous error caused b to be null, then these tests cannot be
+          // performed.
           checkPersistentAreCorrect(
               ASSERTION_FAILED,
               PERSISTENT_AFTER_COMMIT,
@@ -270,7 +269,7 @@ public class PersistentFieldsArePersistentInSubClasses extends TestParts {
 
       // verify rollback lost all persistent changes.
       try { // retrieve object created in previous transaction & store in value array for later
-            // comparison
+        // comparison
         TestParts.thirdObj_V[1] = pm.getObjectById(objPtrB, true);
       } catch (JDOUserException e) {
         // could not locate persistent object created in previous transaction
@@ -289,9 +288,8 @@ public class PersistentFieldsArePersistentInSubClasses extends TestParts {
             a.thirdObj,
             a.intH);
         b = a.thirdObj;
-        if (b
-            != null) { // if previous error caused b to be null, then these tests cannot be
-                       // performed.
+        if (b != null) { // if previous error caused b to be null, then these tests cannot be
+          // performed.
           checkPersistentAreCorrect(
               ASSERTION_FAILED,
               PERSISTENT_AFTER_ROLLBACK,

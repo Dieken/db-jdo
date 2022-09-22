@@ -16,7 +16,6 @@
  */
 package javax.jdo.query;
 
-
 /** Representation of a java.time.LocalDate in a query. */
 public interface LocalDateExpression extends ComparableExpression<java.time.LocalDate> {
   /**
